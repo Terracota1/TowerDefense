@@ -772,7 +772,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "PosiciónToque",
+                    "name": "PosicionToque",
                     "type": "PassThrough",
                     "id": "c7871678-b6ea-4911-af33-bee5d7d28018",
                     "expectedControlType": "Vector2",
@@ -799,7 +799,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Touch",
-                    "action": "PosiciónToque",
+                    "action": "PosicionToque",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
