@@ -10,6 +10,17 @@ public class ZombiePolicia : MonoBehaviour
 
     public Animator Anim;
 
+    private void OnEnable()
+    {
+        objetivo = GameObject.Find("Objetivo");
+    }
+
+    private void OnDisable()
+    {
+
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +46,7 @@ public class ZombiePolicia : MonoBehaviour
 
     public void Danar()
     {
-        objetivo?.GetComponent<Objetivo>().RecibirDano(40);
+        objetivo?.GetComponent<Objetivo>().RecibirDano(10);
     }
 
     public void RecibirDano(int dano = 5)
