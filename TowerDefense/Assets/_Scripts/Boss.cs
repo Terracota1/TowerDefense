@@ -22,6 +22,7 @@ public class Boss : MonoBehaviour
     void Update()
     {
         
+
     }
 
     private void OnCollisionEnter(Collision collision)
