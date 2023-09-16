@@ -785,7 +785,7 @@ public class @ProtoInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""PosiciónToque"",
+                    ""name"": ""PosicionToque"",
                     ""type"": ""PassThrough"",
                     ""id"": ""c7871678-b6ea-4911-af33-bee5d7d28018"",
                     ""expectedControlType"": ""Vector2"",
@@ -812,7 +812,7 @@ public class @ProtoInputActions : IInputActionCollection, IDisposable
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Touch"",
-                    ""action"": ""PosiciónToque"",
+                    ""action"": ""PosicionToque"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -902,7 +902,7 @@ public class @ProtoInputActions : IInputActionCollection, IDisposable
         // Toques
         m_Toques = asset.FindActionMap("Toques", throwIfNotFound: true);
         m_Toques_Toque = m_Toques.FindAction("Toque", throwIfNotFound: true);
-        m_Toques_PosiciónToque = m_Toques.FindAction("PosiciónToque", throwIfNotFound: true);
+        m_Toques_PosicionToque = m_Toques.FindAction("PosicionToque", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1107,13 +1107,13 @@ public class @ProtoInputActions : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Toques;
     private IToquesActions m_ToquesActionsCallbackInterface;
     private readonly InputAction m_Toques_Toque;
-    private readonly InputAction m_Toques_PosiciónToque;
+    private readonly InputAction m_Toques_PosicionToque;
     public struct ToquesActions
     {
         private @ProtoInputActions m_Wrapper;
         public ToquesActions(@ProtoInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Toque => m_Wrapper.m_Toques_Toque;
-        public InputAction @PosiciónToque => m_Wrapper.m_Toques_PosiciónToque;
+        public InputAction @PosicionToque => m_Wrapper.m_Toques_PosicionToque;
         public InputActionMap Get() { return m_Wrapper.m_Toques; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1126,9 +1126,9 @@ public class @ProtoInputActions : IInputActionCollection, IDisposable
                 @Toque.started -= m_Wrapper.m_ToquesActionsCallbackInterface.OnToque;
                 @Toque.performed -= m_Wrapper.m_ToquesActionsCallbackInterface.OnToque;
                 @Toque.canceled -= m_Wrapper.m_ToquesActionsCallbackInterface.OnToque;
-                @PosiciónToque.started -= m_Wrapper.m_ToquesActionsCallbackInterface.OnPosiciónToque;
-                @PosiciónToque.performed -= m_Wrapper.m_ToquesActionsCallbackInterface.OnPosiciónToque;
-                @PosiciónToque.canceled -= m_Wrapper.m_ToquesActionsCallbackInterface.OnPosiciónToque;
+                @PosicionToque.started -= m_Wrapper.m_ToquesActionsCallbackInterface.OnPosicionToque;
+                @PosicionToque.performed -= m_Wrapper.m_ToquesActionsCallbackInterface.OnPosicionToque;
+                @PosicionToque.canceled -= m_Wrapper.m_ToquesActionsCallbackInterface.OnPosicionToque;
             }
             m_Wrapper.m_ToquesActionsCallbackInterface = instance;
             if (instance != null)
@@ -1136,9 +1136,9 @@ public class @ProtoInputActions : IInputActionCollection, IDisposable
                 @Toque.started += instance.OnToque;
                 @Toque.performed += instance.OnToque;
                 @Toque.canceled += instance.OnToque;
-                @PosiciónToque.started += instance.OnPosiciónToque;
-                @PosiciónToque.performed += instance.OnPosiciónToque;
-                @PosiciónToque.canceled += instance.OnPosiciónToque;
+                @PosicionToque.started += instance.OnPosicionToque;
+                @PosicionToque.performed += instance.OnPosicionToque;
+                @PosicionToque.canceled += instance.OnPosicionToque;
             }
         }
     }
@@ -1210,6 +1210,6 @@ public class @ProtoInputActions : IInputActionCollection, IDisposable
     public interface IToquesActions
     {
         void OnToque(InputAction.CallbackContext context);
-        void OnPosiciónToque(InputAction.CallbackContext context);
+        void OnPosicionToque(InputAction.CallbackContext context);
     }
 }
