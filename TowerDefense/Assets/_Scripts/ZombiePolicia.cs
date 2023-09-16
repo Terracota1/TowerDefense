@@ -40,7 +40,7 @@ public class ZombiePolicia : MonoBehaviour
         if (collision.gameObject.tag == "Objetivo")
         {
             Anim.SetBool("IsMoving", false);
-            Anim.SetTrigger("OnObjetivoReached");
+            Anim.SetTrigger("OnObjectiveReached");
         }
     }
 
