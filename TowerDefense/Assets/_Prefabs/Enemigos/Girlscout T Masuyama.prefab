@@ -178,8 +178,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888588772270238689}
-  m_LocalRotation: {x: -0.00000008939232, y: -0.000000028180782, z: 0.00000008940695,
-    w: 1}
+  m_LocalRotation: {x: -0.00000008939232, y: -0.000000028180782, z: 0.00000008940695, w: 1}
   m_LocalPosition: {x: -1.0658141e-16, y: 0.24498709, z: 1.563194e-14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1011,8 +1010,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4714854399986712917}
-  m_LocalRotation: {x: -0.000000089406925, y: 0.000000029729293, z: -0.00000008940695,
-    w: 1}
+  m_LocalRotation: {x: -0.000000089406925, y: 0.000000029729293, z: -0.00000008940695, w: 1}
   m_LocalPosition: {x: 2.664535e-16, y: 0.24500197, z: 1.3926637e-14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1421,8 +1419,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6033123281243325127}
-  m_LocalRotation: {x: -0.010287565, y: -0.0000000107501315, z: -0.0000059612003,
-    w: 0.9999471}
+  m_LocalRotation: {x: -0.010287565, y: -0.0000000107501315, z: -0.0000059612003, w: 0.9999471}
   m_LocalPosition: {x: 0.00088088674, y: 0.030064378, z: -0.0008103833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2246,7 +2243,7 @@ GameObject:
   - component: {fileID: 8620992244216485211}
   m_Layer: 0
   m_Name: Girlscout T Masuyama
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2283,8 +2280,8 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed by
-    Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
     'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
     'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
     'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
@@ -2357,7 +2354,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745e0dd34f9acd44a85c4363eb16b7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetivo: {fileID: 2365035009287667843, guid: b0ee7608b4312e14998f0ec8d52bdefd,
-    type: 3}
+  objetivo: {fileID: 2365035009287667843, guid: b0ee7608b4312e14998f0ec8d52bdefd, type: 3}
   vida: 20
+  _dano: 5
+  recursosGanados: 200
+  referenciaAdminJuego: {fileID: 0}
+  referenciaSpawner: {fileID: 0}
   Anim: {fileID: 0}

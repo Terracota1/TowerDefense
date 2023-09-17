@@ -27,35 +27,35 @@ public class AdministradorUI : MonoBehaviour
         referenciaAdminJuego.EnRecursosModificados += ActualizarRecursos;
     }
 
-    private void ActualizarRecursos()
+    public void ActualizarRecursos()
     {
         textoRecursos.text = $"Recursos: {referenciaAdminJuego.recursos}";
     }
 
-    private void MostrarMenuOlaGanada()
+    public void MostrarMenuOlaGanada()
     {
         textoEnemigos.text = $"ENEMGOS: \t {referenciaAdminJuego.enemigoBaseDerrotados}";
         textoJefes.text = $"JEFES: \t\t {referenciaAdminJuego.enemigosJefeDerrotados}";
         MenuOlaGanada.SetActive(true);
     }
 
-    private void OcultarMenuOlaGanada()
+    public void OcultarMenuOlaGanada()
     {
         MenuOlaGanada.SetActive(false);
     }
 
-    private void MostrarMensajeUltimoEnemigo()
+    public void MostrarMensajeUltimoEnemigo()
     {
         MensajeFinOla.SetActive(true);
         Invoke("OcultarMensajeUltimoEnemigo", 3);
     }
 
-    private void OcultarMensajeUltimoEnemigo()
+    public void OcultarMensajeUltimoEnemigo()
     {
         MensajeFinOla.SetActive(false);
     }
 
-    private void ActualizarOla()
+    public void ActualizarOla()
     {
         textoOleada.text = $"Ola: {referenciaSpawner.oleada}";
         OcultarMenuOlaGanada();

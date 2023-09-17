@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 91808549871617905}
   m_Layer: 0
   m_Name: character
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,9 +335,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f620f9beed2242443b1723d7d592b0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetivo: {fileID: 2365035009287667843, guid: b0ee7608b4312e14998f0ec8d52bdefd,
-    type: 3}
+  objetivo: {fileID: 2365035009287667843, guid: b0ee7608b4312e14998f0ec8d52bdefd, type: 3}
   vida: 100
+  _dano: 5
+  recursosGanados: 200
+  referenciaAdminJuego: {fileID: 0}
+  referenciaSpawner: {fileID: 0}
   Anim: {fileID: 0}
 --- !u!1 &1340463183882768711
 GameObject:
