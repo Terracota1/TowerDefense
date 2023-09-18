@@ -1533,21 +1533,13 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6230225794644096257}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 11192317b21ab144aa1f5b9c4c9a7f55, type: 3}
+  m_Avatar: {fileID: 9000000, guid: bcf925ef8d74abf4e93cf5ed90d2f2f4, type: 3}
   m_Controller: {fileID: 9100000, guid: 28b134ced2df2e04c9cfdb39018c03ee, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-    'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-    'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
-    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
-    'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'ZombieIdle'\n\tFrom
-    animation clip 'ZombieRun'\n\tFrom animation clip 'ZombieAttack'\n\tFrom animation
-    clip 'ZombieDeath'\n\tFrom animation clip 'ZombieDying'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
