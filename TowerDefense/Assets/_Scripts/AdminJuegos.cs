@@ -23,6 +23,7 @@ public class AdminJuegos : MonoBehaviour
     public void ResetValores()
     {
         enemigoBaseDerrotados = 0;
-        enemigosJefeDerrotados= 0;
+        enemigosJefeDerrotados = 0;
     }
 }
+
