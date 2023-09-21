@@ -11,6 +11,11 @@ public class AdminJuegos : MonoBehaviour
     public delegate void RecursosModificados();
     public event RecursosModificados EnRecursosModificados;
 
+    void Start()
+    {
+        recursos = 1000;
+    }
+
     public void ModificarRecursos(int modificacion)
     {
         recursos += modificacion;

@@ -9,6 +9,7 @@ TagManager:
   - Enemigo
   - SpawnerEnemigos
   - AdminJuego
+  - enemigo
   layers:
   - Default
   - TransparentFX
