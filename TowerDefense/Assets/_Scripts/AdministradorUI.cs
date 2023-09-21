@@ -25,6 +25,7 @@ public class AdministradorUI : MonoBehaviour
         referenciaSpawner.EnOleadaTerminada += MostrarMensajeUltimoEnemigo;
         referenciaSpawner.EnOleadaGanada += MostrarMenuOlaGanada;
         referenciaAdminJuego.EnRecursosModificados += ActualizarRecursos;
+        referenciaSpawner.EnOleadaIniciada += ActualizarRecursos;
     }
 
     public void ActualizarRecursos()
@@ -57,7 +58,7 @@ public class AdministradorUI : MonoBehaviour
 
     public void ActualizarOla()
     {
-        textoOleada.text = $"Ola: {referenciaSpawner.oleada}";
+        textoOleada.text = $"Oleada: {referenciaSpawner.oleada}";
         OcultarMenuOlaGanada();
     }
 
@@ -68,6 +69,7 @@ public class AdministradorUI : MonoBehaviour
         referenciaSpawner.EnOleadaTerminada -= MostrarMensajeUltimoEnemigo;
         referenciaSpawner.EnOleadaGanada -= MostrarMenuOlaGanada;
         referenciaAdminJuego.EnRecursosModificados -= ActualizarRecursos;
+        referenciaSpawner.EnOleadaIniciada -= ActualizarRecursos;
     }
 
     public void MostrarMenuFinOleada()
@@ -82,7 +84,7 @@ public class AdministradorUI : MonoBehaviour
 
     public void MostrarMenuGameOver()
     {
-        menuPerdiste.SetActive(false);
+        menuPerdiste.SetActive(true);
     }
 
     public void OcultarMenuGameOver()
