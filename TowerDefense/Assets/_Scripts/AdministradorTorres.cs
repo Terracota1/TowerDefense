@@ -6,7 +6,7 @@ using UnityEngine;
 public class AdministradorTorres : MonoBehaviour
 {
     public AdministradorToques referenciaAdminTorres;
-    public AdminJuegos referenciaAdminJego;
+    public AdminJuegos referenciaAdminJuego;
     public SpawnearEnemigos referenciaSpawner;
     public GameObject Objetivo;
 
@@ -38,13 +38,13 @@ public class AdministradorTorres : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void ActualizarObjetivo()
@@ -53,30 +53,39 @@ public class AdministradorTorres : MonoBehaviour
         {
             float distanciaMasCorta = float.MaxValue;
             GameObject enemigoMasCercano = null;
-            foreach (GameObject enemigo in referenciaSpawner.EnemigosGenerados)
+
+            if (referenciaSpawner.EnemigosGenerados.Count > 0)
             {
-                float dist = Vector3.Distance(enemigo.transform.position, Objetivo.transform.position);
-                if(dist < distanciaMasCorta)
+                foreach (GameObject enemigo in referenciaSpawner.EnemigosGenerados)
                 {
-                    distanciaMasCorta = dist;
-                    enemigoMasCercano = enemigo;
+                    float dist = Vector3.Distance(enemigo.transform.position, Objetivo.transform.position);
+                    if (dist < distanciaMasCorta)
+                    {
+                        distanciaMasCorta = dist;
+                        enemigoMasCercano = enemigo;
+                    }
                 }
             }
-            if(enemigoMasCercano != null)
+
+            if (enemigoMasCercano != null)
             {
-                foreach (GameObject torre in torresInstanciadas)
+                if (torresInstanciadas.Count > 0)
                 {
-                    torre.GetComponent<TorreBase>().enemigo = enemigoMasCercano;
-                    torre.GetComponent<TorreBase>().Disparar();
-                }
-                if(EnEnemigoObjetivoActualizado != null)
-                {
-                    EnEnemigoObjetivoActualizado();
+                    foreach (GameObject torre in torresInstanciadas)
+                    {
+                        torre.GetComponent<TorreBase>().enemigo = enemigoMasCercano;
+                        torre.GetComponent<TorreBase>().Disparar();
+                    }
+                    if (EnEnemigoObjetivoActualizado != null)
+                    {
+                        EnEnemigoObjetivoActualizado();
+                    }
                 }
             }
         }
         Invoke("ActualizarObjetivo", 3);
     }
+
 
     private void CrearTorre(GameObject plataforma)
     {
@@ -90,21 +99,22 @@ public class AdministradorTorres : MonoBehaviour
             _ => 0
         };
 
-        if (plataforma.transform.childCount == 0 && referenciaAdminJego.recursos >= costo)
+        if (referenciaAdminJuego.recursos >= costo)
         {
-            referenciaAdminJego.ModificarRecursos(-costo);
+            referenciaAdminJuego.ModificarRecursos(-costo);
             Debug.Log("Creando Torre");
             int indiceTorre = (int)torreSeleccionada;
             Vector3 posParaInstanciar = plataforma.transform.position;
             posParaInstanciar.y += 0.5f;
             GameObject torreInstanciada = Instantiate<GameObject>(prefabsTorres[indiceTorre], posParaInstanciar, Quaternion.identity);
             torreInstanciada.transform.SetParent(plataforma.transform);
+            torresInstanciadas.Add(torreInstanciada);
         }
     }
 
     public void ConfigurarTorre(int torre)
     {
-        if(Enum.IsDefined(typeof(TorreSeleccionada), torre))
+        if (Enum.IsDefined(typeof(TorreSeleccionada), torre))
         {
             torreSeleccionada = (TorreSeleccionada)torre;
         }

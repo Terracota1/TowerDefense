@@ -18,6 +18,11 @@ public class AdministradorUI : MonoBehaviour
     public TMPro.TMP_Text textoEnemigos;
     public TMPro.TMP_Text textoJefes;
 
+    private void Start()
+    {
+        ActualizarRecursos();
+    }
+
     private void OnEnable()
     {
         referenciaObjetivo.EnObjetivoDestruido += MostrarMenuGameOver;
