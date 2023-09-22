@@ -5,9 +5,9 @@ using UnityEngine;
 public class Bala : MonoBehaviour, IAtacante
 {
     public Vector3 destino;
-    public float velocidad = 20;
+    public float velocidad = 100;
     public GameObject enemigo;
-    public int _dano = 10;
+    public int _dano = 25;
 
     // Start is called before the first frame update
     void Start()

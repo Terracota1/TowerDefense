@@ -13,7 +13,7 @@ public class AdminJuegos : MonoBehaviour
 
     void Start()
     {
-        recursos = 1000;
+        recursos = 2000;
     }
 
     public void ModificarRecursos(int modificacion)

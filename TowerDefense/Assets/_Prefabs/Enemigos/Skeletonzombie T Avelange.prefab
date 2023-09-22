@@ -1618,8 +1618,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.0578647, z: 0.6042075}
-  m_Center: {x: 0, y: 1.031605, z: 0.017832518}
+  m_Size: {x: 2.4170425, y: 2.0578647, z: 1.6000646}
+  m_Center: {x: 0.15682761, y: 1.031605, z: -0.039258324}
 --- !u!195 &6536795124667536446
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1630,7 +1630,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
