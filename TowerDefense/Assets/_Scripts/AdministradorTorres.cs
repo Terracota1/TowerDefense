@@ -95,7 +95,7 @@ public class AdministradorTorres : MonoBehaviour
             TorreSeleccionada.Torre2 => 600,
             TorreSeleccionada.Torre3 => 800,
             TorreSeleccionada.Torre4 => 1000,
-            TorreSeleccionada.Torre5 => 200,
+            TorreSeleccionada.Torre5 => 1200,
             _ => 0
         };
 

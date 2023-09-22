@@ -2380,7 +2380,7 @@ MonoBehaviour:
   - {fileID: 8890812738662443343, guid: 11ab5cbebe78767499ea19d6d08c443e, type: 3}
   - {fileID: 6230225794644096257, guid: 672a62efc1c5d31418e99fb7bd5b7c26, type: 3}
   oleada: 0
-  enemigosPorOleada: 03000000190000001e000000
+  enemigosPorOleada: 14000000190000001e000000
   laOleadaHaIniciado: 0
   EnemigosGenerados: []
 --- !u!1 &816783793

@@ -7,13 +7,13 @@ public class Boss : EnemigoBase
 {
     public void Awake()
     {
-        vida = 200;
-        _dano = 20;
+        vida = 500;
+        _dano = 30;
     }
 
     public override void OnDestroy()
     {
         base.OnDestroy();
-        referenciaAdminJuego.enemigoBaseDerrotados++;
+        referenciaAdminJuego.enemigosJefeDerrotados++;
     }
 }
