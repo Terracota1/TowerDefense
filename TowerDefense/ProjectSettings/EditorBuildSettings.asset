@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 3499e08f75e3a954dbd30019f7095826
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Oleadas Nivel.unity
+    guid: 0a6db328adcb37f44948afd3abe5c30c
   m_configObjects: {}
