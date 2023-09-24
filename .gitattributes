@@ -6,3 +6,6 @@
 *.tiff filter=lfs diff=lfs merge=lfs -text
 *.mp3 filter=lfs diff=lfs merge=lfs -text
 *.ogg filter=lfs diff=lfs merge=lfs -text
+TowerDefense/Assets/Scenes/Oleadas[[:space:]]Nivel.unity filter=lfs diff=lfs merge=lfs -text
+TowerDefense/Library/* filter=lfs diff=lfs merge=lfs -text
+TowerDefense/Library/Bee/* filter=lfs diff=lfs merge=lfs -text
