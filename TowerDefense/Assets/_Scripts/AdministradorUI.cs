@@ -35,13 +35,13 @@ public class AdministradorUI : MonoBehaviour
 
     public void ActualizarRecursos()
     {
-        textoRecursos.text = $"Recursos: {referenciaAdminJuego.recursos}";
+        textoRecursos.text = $"Resources: {referenciaAdminJuego.recursos}";
     }
 
     public void MostrarMenuOlaGanada()
     {
-        textoEnemigos.text = $"ENEMGOS: \t {referenciaAdminJuego.enemigoBaseDerrotados}";
-        textoJefes.text = $"JEFES: \t\t {referenciaAdminJuego.enemigosJefeDerrotados}";
+        textoEnemigos.text = $"Enemies: \t {referenciaAdminJuego.enemigoBaseDerrotados}";
+        textoJefes.text = $"Bosses: \t\t {referenciaAdminJuego.enemigosJefeDerrotados}";
         MenuOlaGanada.SetActive(true);
     }
 
@@ -63,7 +63,7 @@ public class AdministradorUI : MonoBehaviour
 
     public void ActualizarOla()
     {
-        textoOleada.text = $"Oleada: {referenciaSpawner.oleada}";
+        textoOleada.text = $"Wave: {referenciaSpawner.oleada}";
         OcultarMenuOlaGanada();
     }
 
